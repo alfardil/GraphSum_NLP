@@ -6,7 +6,7 @@ This code summarizes a document by picking its most important sentences. It turn
 2. BERT's next-sentence prediction (NSP) sets the direction of each link. The sentence that builds on another one points to it. If NSP thinks neither order makes sense, the two sentences get a negative link instead.
 3. PageTrust, a version of PageRank that can use negative links, scores every sentence. The highest-scoring sentences form the summary.
 
-This repo is the `graph/` part of the team project [Motabagani/graph-summarization](https://github.com/Motabagani/graph-summarization). The team's `ranking/` folder has the preprocessor, PageTrust and the sentence selector, and this repo builds the graph they run on.
+This code is the `graph/` folder of the team project [Motabagani/graph-summarization](https://github.com/Motabagani/graph-summarization). The team's `ranking/` folder has the preprocessor, PageTrust and the sentence selector, and this code builds the graph they run on. Run the commands below from inside `graph/`.
 
 ## Setup and running
 
