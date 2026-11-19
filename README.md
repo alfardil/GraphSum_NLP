@@ -18,6 +18,8 @@ python evaluate.py --datasets cnn_dm --limit-dev 200 --limit-test 1000   # or ./
 
 Each run tunes every system on dev documents, scores it on test documents and writes three files to `results/` (or to `--out`). `results.md` has the score tables. `results.json` has the same numbers plus the dev score of every setting tried, and both record where in the document the Oracle's sentences fall. `per_doc.jsonl` lists the sentences each system picked in each document, with its ROUGE score.
 
+`run_eval.sh` ends by running `scripts/merge_tables.py`, which turns the run folders into the paper's main-results and ablation tables. `scripts/analysis.py` does the error analysis: it dumps the documents where our system loses most to a simpler one, draws example graphs and plots where the chosen sentences sit in the document.
+
 To check that everything works without downloading data or a real model:
 
 ```bash
@@ -47,7 +49,7 @@ The defaults match `ranking/`. NLTK punkt splits sentences, arXiv and PubMed are
 
 `tests/test_team_compat.py` checks the rankers, summary lengths, sentence selection, splitting and clause scoring against the team's code. It looks for `ranking/` in `../ranking` or in `$TEAM_RANKING`.
 
-The numbers in `results/small/` and `results/analysis/` are out of date. They used spaCy splitting and an older PageTrust stopping rule that gave different results at γ = ∞, so re-run them before comparing with the team's numbers.
+Preview runs made before this alignment (`results/` in [alfardil/GraphSum_NLP](https://github.com/alfardil/GraphSum_NLP)) are out of date. They used spaCy splitting and an older PageTrust stopping rule that gave different results at γ = ∞, so re-run before comparing with the team's numbers.
 
 ## Settings
 
