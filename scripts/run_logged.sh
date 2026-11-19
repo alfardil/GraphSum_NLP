@@ -17,7 +17,8 @@ seed=$(printf '%s\n' "$@" | awk 'p{print; exit} /^--seed$/{p=1}')
   else
     echo "git commit: none (not a git repository)"
   fi
-  echo "source sha256 (*.py, sorted): $(cat $(ls *.py | sort) | shasum -a 256 | cut -d' ' -f1)"
+  sha256() { if command -v sha256sum >/dev/null; then sha256sum; else shasum -a 256; fi; }   # Linux / macOS
+  echo "source sha256 (*.py, sorted): $(cat $(ls *.py | sort) | sha256 | cut -d' ' -f1)"
   echo "host: $(hostname)  started: $(date -u +%FT%TZ)"
   python - <<'EOF'
 import importlib.metadata as md, platform
