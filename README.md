@@ -1,14 +1,14 @@
-# Graph-based extractive summarization: frozen-BERT direction + PageTrust
+# GraphSum: BERT sentence graphs ranked with PageTrust
 
-| File | What it does |
-|---|---|
-| `bert_graph.py` | vertices (sentences or clauses), frozen BERT vectors, PacSum β threshold, NSP direction, negative edges, λ |
-| `splitting.py` | sentence / clause / reference splitting, matched to the team's `ranking/` (NLTK punkt, arXiv/PubMed pre-split, rule-based clauses) |
-| `rankers.py` | PageTrust (de Kerchove & Van Dooren 2008, Alg. 4.1), PageRank, degree; numerically identical to `ranking/pagetrust.py` |
-| `baselines.py` | stemmed preprocessing, Lead, Random, Oracle, Degree (TF-IDF), TextRank, LexPageRank, PacSum (TF-IDF) |
-| `data.py` | loaders for CNN/DM, arXiv, PubMed, tldr-17, WikiHow, BillSum; 80/10/10 pooled splits |
-| `pipeline.py` | every system behind one interface + `Summarizer` for single documents |
-| `evaluate.py` | dev tuning → test ROUGE-1/2/L F1, ablations, error-analysis logs |
+This code summarizes a document by picking its most important sentences. It turns the document into a graph of sentences and ranks them:
+
+1. Sentences that say similar things get linked. Similarity comes from a frozen BERT model (used as is, not fine-tuned), and weak links are dropped with PacSum's threshold β.
+2. BERT's next-sentence prediction (NSP) sets the direction of each link. The sentence that builds on another one points to it. If NSP thinks neither order makes sense, the two sentences get a negative link instead.
+3. PageTrust, a version of PageRank that can use negative links, scores every sentence. The highest-scoring sentences form the summary.
+
+This repo is the `graph/` part of the team project [Motabagani/graph-summarization](https://github.com/Motabagani/graph-summarization). The team's `ranking/` folder has the preprocessor, PageTrust and the sentence selector, and this repo builds the graph they run on.
+
+## Setup and running
 
 ```bash
 pip install -r requirements.txt && python -m spacy download en_core_web_sm
@@ -16,31 +16,55 @@ python -c "import nltk; nltk.download('punkt_tab')"
 python evaluate.py --datasets cnn_dm --limit-dev 200 --limit-test 1000   # or ./run_eval.sh for everything
 ```
 
-Results go to `results/results.md` (tables), `results.json` (plus every dev grid point),
-`per_doc.jsonl` (per-document selections and ROUGE, for targeted inspection) and Oracle
-position deciles (for the position analysis).
+Each run tunes every system on dev documents, scores it on test documents and writes three files to `results/` (or to `--out`). `results.md` has the score tables. `results.json` has the same numbers plus the dev score of every setting tried, and both record where in the document the Oracle's sentences fall. `per_doc.jsonl` lists the sentences each system picked in each document, with its ROUGE score.
 
-## Compatibility with the team repo
-This is the `graph/` folder of [Motabagani/graph-summarization](https://github.com/Motabagani/graph-summarization).
-- **Interface.** `build_graph(...).W` is the team's `W`: `W[i, j] > 0` is an edge i → j, `< 0` means NSP rejected both orders, and the diagonal is ignored. Pass it to `ranking/pagetrust.py: pagetrust(W, alpha, gamma, memory)`.
-- **Using the team Preprocessor's units:** `vertices_from_units(doc.units, doc.unit_sentence)` builds vertices from a `ranking/preprocess.py` `Document`.
-- **Same defaults as `ranking/`:** NLTK punkt sentences; arXiv/PubMed pre-split at `" ."` tokens; references split like `ranking/run.py: ref_lines`; rule-based clauses (`ranking/preprocess.py: split_clauses`); max over a sentence's clause scores (`ranking/selector.py`); the same budgets and tie-breaking; `cnndm` is accepted as an alias for `cnn_dm`. The original graphsum setup is still available: `--splitter spacy --clause-splitter spacy --aggregate mean`.
-- **Check:** `tests/test_team_compat.py` compares rankers, budgets and selection, splitting and aggregation against the team code. It finds `ranking/` at `../ranking`, or at `$TEAM_RANKING`.
-- `results/small/` and `results/analysis/` predate these changes: they used spaCy splitting and the old PageTrust stopping rule, which differed from the team's at γ = ∞. Re-run before comparing them with team numbers.
+To check that everything works without downloading data or a real model:
 
-## Conventions and choices
-- `W[i, j]` is an edge i → j (i endorses j). If NSP finds "A then B" more plausible, B builds on A, so the edge is B → A.
-- NSP rejects both orders (isNext log-odds < 0 both ways) → negative edge both ways. Confidence = tanh(|Δ log-odds| / 2), because NSP probabilities saturate near 1 for in-document pairs.
-- Fixed: α = 0.85, ε = 1e-6, at most 100 iterations. Tuned on dev: β ∈ {0, .3, .6}, γ ∈ {0, 1, 2, ∞}, M ∈ {0, .5, .9, 1} (the proposal's {0, 1} plus the team's {0, .5, .9}); λ ∈ {0, .5, 1} for clauses; PacSum λ1 ∈ {−2, −1, −.5, 0} with λ2 = 1.
-- Summary length: the team's fixed per-dataset budgets, shared with the baselines in the team repo (`TEAM_BUDGETS` in `evaluate.py`: CNN/DM 3 sentences, tldr 1 sentence, PubMed 203 words, arXiv 220, BillSum 184, WikiHow 55). Word budgets add sentences best-first until the budget is reached; `--overflow` sets the rule for the sentence that crosses it (default `include`). `--length median` uses the median number of dev reference sentences instead (always the case for `--synthetic`), and `--n K` forces K sentences.
-- ROUGE uses Google's `rouge-score` (stemmed, ROUGE-Lsum), so numbers are close to, but not identical with, the Perl ROUGE-1.5.5 figures quoted from PacSum/HipoRank.
-- Read the graph diagnostics under each table. A high "all-tied docs" share means NSP left too few positive edges and the system fell back to Lead through tie-breaking.
-
-## Cost
-NSP needs two BERT passes per sentence pair that survives the threshold. β = 0 keeps every pair, so a 200-sentence arXiv paper costs ~40k passes. That's fine on a GPU for CNN/DM and tldr, but for long documents use `--max-sentences` and `--betas 0.3 0.6` (as `run_eval.sh` does). It's impractical on CPU beyond small samples.
-
-## Offline check (no downloads)
 ```bash
 python tests/make_tiny_bert.py /tmp/tinybert
 python evaluate.py --synthetic --model /tmp/tinybert --limit-dev 20 --limit-test 30 --clauses
 ```
+
+## Files
+
+| File | What it does |
+|---|---|
+| `bert_graph.py` | Builds the graph: sentences or clauses as nodes, BERT similarity, the β threshold, NSP direction and negative links |
+| `splitting.py` | Splits documents and reference summaries into sentences and clauses, the same way the team's `ranking/` code does |
+| `rankers.py` | PageTrust (de Kerchove & Van Dooren 2008, Algorithm 4.1), PageRank and degree; gives the same scores as `ranking/pagetrust.py` |
+| `baselines.py` | Lead, Random, Oracle, Degree (TF-IDF), TextRank, LexPageRank and PacSum (TF-IDF), on stemmed text |
+| `data.py` | Loads CNN/DM, arXiv, PubMed, tldr-17, WikiHow and BillSum, with an 80/10/10 split for datasets that have no dev/test split |
+| `pipeline.py` | Puts every system behind one interface; `Summarizer` summarizes a single document |
+| `evaluate.py` | Tunes on dev, then reports test ROUGE-1/2/L F1, ablations and per-document logs |
+
+## Working with the team repo
+
+The graph for each document is a matrix `W` in the team's format. `W[i, j] > 0` is a link from sentence i to sentence j, `W[i, j] < 0` is a negative link (NSP rejected both orders), 0 means no link, and the diagonal is ignored. Pass it to `pagetrust(W, alpha, gamma, memory)` in `ranking/pagetrust.py`. To build the graph on the team preprocessor's sentences or clauses, use `vertices_from_units(doc.units, doc.unit_sentence)`.
+
+The defaults match `ranking/`. NLTK punkt splits sentences, arXiv and PubMed are split at their `" ."` tokens, and reference summaries are split like `ref_lines` in `ranking/run.py`. Clauses come from the team's rule-based splitter, and a sentence's score is the highest score among its clauses. Summary lengths and tie-breaking are the same too, and `cnndm` works as a name for `cnn_dm`. To use this repo's original setup (spaCy splitting and the average clause score), add `--splitter spacy --clause-splitter spacy --aggregate mean`.
+
+`tests/test_team_compat.py` checks the rankers, summary lengths, sentence selection, splitting and clause scoring against the team's code. It looks for `ranking/` in `../ranking` or in `$TEAM_RANKING`.
+
+The numbers in `results/small/` and `results/analysis/` are out of date. They used spaCy splitting and an older PageTrust stopping rule that gave different results at γ = ∞, so re-run them before comparing with the team's numbers.
+
+## Settings
+
+Link direction: if NSP finds "A then B" more plausible than "B then A", then B builds on A, so the link goes from B to A. A pair gets negative links both ways when NSP rejects both orders (its isNext log-odds are below 0 both ways). A link's confidence is tanh(|Δ log-odds| / 2). The code uses log-odds because NSP probabilities sit close to 1 for almost any two sentences from the same document.
+
+α = 0.85, ε = 1e-6 and the 100-iteration cap are fixed. These are tuned on dev:
+
+- β, the similarity threshold: {0, 0.3, 0.6}
+- γ, how much distrust lowers a sentence's score: {0, 1, 2, ∞}
+- M, how much a PageTrust walker remembers after a random jump: {0, 0.5, 0.9, 1}, the proposal's {0, 1} plus the team's {0, 0.5, 0.9}
+- λ, the extra weight on links between clauses of the same sentence: {0, 0.5, 1}
+- PacSum's λ1: {−2, −1, −0.5, 0}, with λ2 = 1
+
+Summary lengths are the team's fixed budgets, shared with the baselines (`TEAM_BUDGETS` in `evaluate.py`): 3 sentences for CNN/DM, 1 sentence for tldr, and 203, 220, 184 and 55 words for PubMed, arXiv, BillSum and WikiHow. For word budgets, sentences are added best first until the budget is reached, and `--overflow` decides what happens to the sentence that crosses it (default `include`). `--length median` uses the median number of sentences in the dev reference summaries instead (always the case with `--synthetic`), and `--n K` forces K sentences.
+
+Scores come from Google's `rouge-score` (with stemming, ROUGE-Lsum). They are close to, but not the same as, the Perl ROUGE-1.5.5 numbers that PacSum and HipoRank report.
+
+Each results table is followed by graph diagnostics. A high "all-tied docs" share means NSP left too few positive links, so every sentence scored the same and the system fell back to picking the first sentences (Lead).
+
+## Cost
+
+NSP runs BERT twice for each sentence pair that passes the threshold. β = 0 keeps every pair, so a 200-sentence arXiv paper needs about 40,000 BERT passes. A GPU handles CNN/DM and tldr. For long documents, add `--max-sentences` and `--betas 0.3 0.6`, as `run_eval.sh` does. On a CPU, only small samples are practical.
