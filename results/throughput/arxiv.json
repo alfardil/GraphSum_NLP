@@ -1,0 +1,18 @@
+{
+ "dataset": "arxiv",
+ "device": "mps",
+ "batch_size": 32,
+ "nsp_max_length": 256,
+ "docs": 3,
+ "mean_sentences": 148.3,
+ "nsp_passes_per_sec": 66.1,
+ "graph_beta": 0.3,
+ "embed_s_per_doc": 1.789,
+ "build_graph_s_per_doc": 0.028,
+ "pagetrust_s_per_call": 0.0212,
+ "kept_pair_share_by_beta": {
+  "0.0": 1.0,
+  "0.3": 0.899,
+  "0.6": 0.311
+ }
+}

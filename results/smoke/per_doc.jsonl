@@ -1,0 +1,200 @@
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-8641", "n_sentences": 22, "selected": [0, 1, 2, 3], "rouge": [45.16, 24.59, 40.32]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3477", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [50.0, 37.25, 48.08]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-227", "n_sentences": 50, "selected": [0, 1, 2, 3], "rouge": [23.84, 6.71, 23.84]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5413", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [51.75, 26.95, 47.55]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5572", "n_sentences": 54, "selected": [0, 1, 2, 3], "rouge": [34.38, 9.45, 32.81]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-10860", "n_sentences": 16, "selected": [0, 1, 2, 3], "rouge": [63.91, 23.95, 53.25]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-11208", "n_sentences": 31, "selected": [0, 1, 2, 3], "rouge": [52.94, 31.34, 41.18]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9604", "n_sentences": 34, "selected": [0, 1, 2, 3], "rouge": [47.41, 31.58, 44.44]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-6297", "n_sentences": 13, "selected": [0, 1, 2, 3], "rouge": [45.33, 36.49, 44.0]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-1650", "n_sentences": 28, "selected": [0, 1, 2, 3], "rouge": [16.53, 1.68, 16.53]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-1427", "n_sentences": 48, "selected": [0, 1, 2, 3], "rouge": [27.14, 14.49, 25.71]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-10373", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [22.22, 3.01, 19.26]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-1537", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [43.1, 10.53, 39.66]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9041", "n_sentences": 41, "selected": [0, 1, 2, 3], "rouge": [36.92, 9.38, 35.38]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-4398", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [16.87, 0.0, 7.23]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-10877", "n_sentences": 19, "selected": [0, 1, 2, 3], "rouge": [42.86, 23.19, 41.43]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-11266", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [44.04, 13.08, 34.86]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9373", "n_sentences": 35, "selected": [0, 1, 2, 3], "rouge": [46.81, 24.46, 42.55]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5722", "n_sentences": 20, "selected": [0, 1, 2, 3], "rouge": [31.76, 8.33, 27.06]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3570", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [16.16, 4.12, 14.14]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-1421", "n_sentences": 35, "selected": [0, 1, 2, 3], "rouge": [17.65, 6.0, 17.65]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-2853", "n_sentences": 21, "selected": [0, 1, 2, 3], "rouge": [53.12, 36.51, 50.0]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9951", "n_sentences": 70, "selected": [0, 1, 2, 3], "rouge": [40.82, 11.03, 32.65]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5765", "n_sentences": 16, "selected": [0, 1, 2, 3], "rouge": [41.77, 15.38, 36.71]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-8615", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [24.84, 11.32, 24.84]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-982", "n_sentences": 68, "selected": [0, 1, 2, 3], "rouge": [31.37, 16.0, 29.41]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5856", "n_sentences": 33, "selected": [0, 1, 2, 3], "rouge": [45.64, 14.97, 40.27]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3220", "n_sentences": 8, "selected": [0, 1, 2, 3], "rouge": [25.71, 7.25, 25.71]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5190", "n_sentences": 43, "selected": [0, 1, 2, 3], "rouge": [46.26, 23.45, 42.18]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-6169", "n_sentences": 30, "selected": [0, 1, 2, 3], "rouge": [46.7, 15.38, 35.53]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-315", "n_sentences": 10, "selected": [0, 1, 2, 3], "rouge": [26.26, 12.37, 26.26]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-2335", "n_sentences": 9, "selected": [0, 1, 2, 3], "rouge": [35.04, 11.85, 32.12]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-1343", "n_sentences": 14, "selected": [0, 1, 2, 3], "rouge": [38.1, 18.07, 35.71]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-8606", "n_sentences": 24, "selected": [0, 1, 2, 3], "rouge": [48.35, 25.56, 45.05]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-8636", "n_sentences": 31, "selected": [0, 1, 2, 3], "rouge": [44.96, 11.02, 40.31]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-4687", "n_sentences": 50, "selected": [0, 1, 2, 3], "rouge": [21.97, 2.34, 20.81]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-11049", "n_sentences": 23, "selected": [0, 1, 2, 3], "rouge": [34.36, 11.18, 26.99]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-4847", "n_sentences": 62, "selected": [0, 1, 2, 3], "rouge": [58.59, 40.82, 56.57]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9920", "n_sentences": 15, "selected": [0, 1, 2, 3], "rouge": [51.39, 30.99, 47.22]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-7376", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [39.81, 9.57, 35.07]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3011", "n_sentences": 39, "selected": [0, 1, 2, 3], "rouge": [29.38, 6.86, 28.25]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9480", "n_sentences": 44, "selected": [0, 1, 2, 3], "rouge": [44.09, 23.91, 41.94]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-9420", "n_sentences": 53, "selected": [0, 1, 2, 3], "rouge": [28.15, 9.02, 28.15]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-5202", "n_sentences": 62, "selected": [0, 1, 2, 3], "rouge": [47.76, 9.09, 40.3]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3128", "n_sentences": 42, "selected": [0, 1, 2, 3], "rouge": [29.69, 6.35, 23.44]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-712", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [38.85, 17.52, 38.85]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-3780", "n_sentences": 10, "selected": [0, 1, 2, 3], "rouge": [43.24, 22.02, 36.04]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-2943", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [34.43, 18.33, 32.79]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-4626", "n_sentences": 107, "selected": [0, 1, 2, 3], "rouge": [30.87, 9.52, 29.53]}
+{"dataset": "cnn_dm", "system": "lead", "doc": "cnn_dm-test-398", "n_sentences": 33, "selected": [0, 1, 2, 3], "rouge": [21.69, 4.88, 18.07]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-8641", "n_sentences": 22, "selected": [1, 9], "rouge": [61.54, 31.46, 50.55]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3477", "n_sentences": 18, "selected": [1, 2, 3], "rouge": [57.78, 43.18, 55.56]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-227", "n_sentences": 50, "selected": [0, 17], "rouge": [56.34, 28.99, 56.34]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5413", "n_sentences": 25, "selected": [1, 2], "rouge": [56.6, 32.69, 50.94]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5572", "n_sentences": 54, "selected": [0, 16, 18, 25], "rouge": [46.26, 18.64, 42.7]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-10860", "n_sentences": 16, "selected": [3, 5, 8, 11], "rouge": [63.39, 37.57, 57.92]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-11208", "n_sentences": 31, "selected": [1, 10, 11], "rouge": [74.58, 63.79, 62.71]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9604", "n_sentences": 34, "selected": [1, 8], "rouge": [74.14, 63.16, 74.14]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-6297", "n_sentences": 13, "selected": [1, 2], "rouge": [60.0, 53.85, 57.5]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-1650", "n_sentences": 28, "selected": [6, 22, 23], "rouge": [38.1, 17.07, 35.71]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-1427", "n_sentences": 48, "selected": [0, 1, 23, 29], "rouge": [52.17, 35.4, 50.43]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-10373", "n_sentences": 25, "selected": [5], "rouge": [45.45, 31.25, 42.42]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-1537", "n_sentences": 36, "selected": [0, 1, 5], "rouge": [53.1, 18.02, 46.02]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9041", "n_sentences": 41, "selected": [8, 9, 10, 15], "rouge": [75.93, 58.49, 75.93]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-4398", "n_sentences": 18, "selected": [4, 5], "rouge": [55.88, 45.45, 55.88]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-10877", "n_sentences": 19, "selected": [1, 2], "rouge": [58.43, 32.18, 49.44]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-11266", "n_sentences": 25, "selected": [2, 4, 16], "rouge": [67.35, 50.0, 61.22]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9373", "n_sentences": 35, "selected": [1, 2, 4, 14], "rouge": [60.81, 35.62, 52.7]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5722", "n_sentences": 20, "selected": [2, 9, 10], "rouge": [53.33, 23.73, 48.33]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3570", "n_sentences": 36, "selected": [5, 12], "rouge": [61.86, 31.58, 57.73]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-1421", "n_sentences": 35, "selected": [5, 6, 12], "rouge": [55.05, 20.56, 44.04]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-2853", "n_sentences": 21, "selected": [1, 3, 9], "rouge": [78.26, 48.89, 73.91]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9951", "n_sentences": 70, "selected": [4, 9], "rouge": [55.17, 29.82, 50.0]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5765", "n_sentences": 16, "selected": [3, 7, 12], "rouge": [53.91, 30.09, 52.17]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-8615", "n_sentences": 18, "selected": [0], "rouge": [35.29, 24.24, 35.29]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-982", "n_sentences": 68, "selected": [2, 7], "rouge": [71.87, 48.39, 65.62]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5856", "n_sentences": 33, "selected": [5, 23, 28], "rouge": [58.49, 36.54, 54.72]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3220", "n_sentences": 8, "selected": [3, 5], "rouge": [63.41, 40.0, 63.41]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5190", "n_sentences": 43, "selected": [2], "rouge": [53.61, 35.79, 51.55]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-6169", "n_sentences": 30, "selected": [1, 9, 10, 11], "rouge": [63.04, 29.67, 55.43]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-315", "n_sentences": 10, "selected": [0], "rouge": [43.48, 27.27, 39.13]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-2335", "n_sentences": 9, "selected": [3, 5], "rouge": [47.37, 21.62, 47.37]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-1343", "n_sentences": 14, "selected": [3, 4, 6], "rouge": [60.24, 40.24, 56.63]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-8606", "n_sentences": 24, "selected": [5, 12], "rouge": [66.67, 59.31, 66.67]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-8636", "n_sentences": 31, "selected": [1, 4, 9, 15], "rouge": [61.54, 34.38, 60.0]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-4687", "n_sentences": 50, "selected": [20, 29, 41, 49], "rouge": [43.66, 25.71, 42.25]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-11049", "n_sentences": 23, "selected": [4, 10], "rouge": [50.57, 28.24, 48.28]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-4847", "n_sentences": 62, "selected": [2, 4, 6, 9], "rouge": [74.49, 61.86, 73.47]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9920", "n_sentences": 15, "selected": [3, 4, 8], "rouge": [98.92, 96.7, 98.92]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-7376", "n_sentences": 25, "selected": [4, 13, 16, 21], "rouge": [59.36, 25.81, 44.75]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3011", "n_sentences": 39, "selected": [4, 6, 10, 17], "rouge": [56.0, 30.89, 54.4]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9480", "n_sentences": 44, "selected": [2, 3, 6, 22], "rouge": [55.79, 28.72, 49.47]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-9420", "n_sentences": 53, "selected": [6, 12, 15, 23], "rouge": [46.34, 15.0, 46.34]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-5202", "n_sentences": 62, "selected": [1, 5, 61], "rouge": [54.72, 21.15, 47.17]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3128", "n_sentences": 42, "selected": [1, 9, 10, 36], "rouge": [42.98, 15.13, 39.67]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-712", "n_sentences": 36, "selected": [1, 8], "rouge": [53.93, 41.38, 53.93]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-3780", "n_sentences": 10, "selected": [4, 9], "rouge": [66.67, 59.7, 66.67]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-2943", "n_sentences": 18, "selected": [0, 1], "rouge": [47.19, 25.29, 44.94]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-4626", "n_sentences": 107, "selected": [0, 6, 101, 106], "rouge": [51.85, 30.19, 51.85]}
+{"dataset": "cnn_dm", "system": "oracle", "doc": "cnn_dm-test-398", "n_sentences": 33, "selected": [12, 16, 18], "rouge": [43.2, 14.63, 35.2]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-8641", "n_sentences": 22, "selected": [0, 1, 4, 14], "rouge": [37.04, 19.55, 31.11]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3477", "n_sentences": 18, "selected": [1, 5, 7, 9], "rouge": [30.61, 16.67, 28.57]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-227", "n_sentences": 50, "selected": [7, 15, 45, 46], "rouge": [21.82, 1.85, 18.18]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5413", "n_sentences": 25, "selected": [11, 13, 19, 20], "rouge": [15.79, 3.57, 15.79]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5572", "n_sentences": 54, "selected": [26, 37, 46, 52], "rouge": [13.46, 0.97, 12.5]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-10860", "n_sentences": 16, "selected": [1, 5, 10, 12], "rouge": [53.66, 18.52, 47.56]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-11208", "n_sentences": 31, "selected": [0, 2, 5, 11], "rouge": [43.36, 18.44, 39.16]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9604", "n_sentences": 34, "selected": [9, 17, 18, 20], "rouge": [33.9, 5.17, 27.12]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-6297", "n_sentences": 13, "selected": [0, 2, 6, 9], "rouge": [42.34, 28.15, 40.88]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-1650", "n_sentences": 28, "selected": [7, 11, 15, 19], "rouge": [16.0, 1.63, 16.0]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-1427", "n_sentences": 48, "selected": [0, 1, 2, 6], "rouge": [31.58, 16.79, 30.08]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-10373", "n_sentences": 25, "selected": [0, 1, 6, 20], "rouge": [18.52, 3.75, 17.28]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-1537", "n_sentences": 36, "selected": [1, 7, 21, 22], "rouge": [44.78, 7.58, 32.84]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9041", "n_sentences": 41, "selected": [4, 6, 32, 36], "rouge": [36.13, 14.38, 36.13]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-4398", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [16.87, 0.0, 7.23]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-10877", "n_sentences": 19, "selected": [1, 3, 5, 13], "rouge": [24.24, 7.69, 22.73]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-11266", "n_sentences": 25, "selected": [2, 21, 22, 23], "rouge": [27.72, 10.1, 21.78]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9373", "n_sentences": 35, "selected": [3, 10, 15, 24], "rouge": [32.56, 4.72, 23.26]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5722", "n_sentences": 20, "selected": [1, 3, 14, 18], "rouge": [20.69, 1.99, 17.73]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3570", "n_sentences": 36, "selected": [2, 10, 14, 21], "rouge": [21.62, 5.56, 18.92]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-1421", "n_sentences": 35, "selected": [6, 13, 20, 22], "rouge": [39.22, 8.0, 27.45]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-2853", "n_sentences": 21, "selected": [5, 8, 9, 14], "rouge": [33.6, 13.01, 30.4]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9951", "n_sentences": 70, "selected": [5, 32, 36, 63], "rouge": [32.0, 6.5, 30.4]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5765", "n_sentences": 16, "selected": [0, 1, 3, 12], "rouge": [44.6, 23.36, 41.73]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-8615", "n_sentences": 18, "selected": [3, 10, 11, 15], "rouge": [24.64, 10.29, 23.19]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-982", "n_sentences": 68, "selected": [0, 12, 30, 50], "rouge": [11.59, 0.0, 11.59]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5856", "n_sentences": 33, "selected": [0, 1, 9, 17], "rouge": [45.75, 13.25, 40.52]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3220", "n_sentences": 8, "selected": [0, 3, 4, 7], "rouge": [30.09, 14.41, 30.09]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5190", "n_sentences": 43, "selected": [9, 16, 38, 41], "rouge": [20.0, 1.56, 18.46]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-6169", "n_sentences": 30, "selected": [11, 16, 26, 28], "rouge": [45.28, 11.46, 41.51]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-315", "n_sentences": 10, "selected": [3, 4, 6, 8], "rouge": [18.82, 0.0, 18.82]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-2335", "n_sentences": 9, "selected": [0, 2, 6, 7], "rouge": [24.28, 5.85, 21.97]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-1343", "n_sentences": 14, "selected": [0, 1, 2, 5], "rouge": [40.0, 18.5, 37.71]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-8606", "n_sentences": 24, "selected": [0, 1, 11, 21], "rouge": [49.04, 23.3, 44.23]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-8636", "n_sentences": 31, "selected": [0, 6, 7, 8], "rouge": [14.95, 0.0, 14.95]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-4687", "n_sentences": 50, "selected": [6, 13, 15, 27], "rouge": [25.91, 6.28, 23.83]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-11049", "n_sentences": 23, "selected": [9, 10, 11, 21], "rouge": [25.6, 4.88, 22.4]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-4847", "n_sentences": 62, "selected": [0, 1, 18, 19], "rouge": [38.3, 17.17, 36.6]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9920", "n_sentences": 15, "selected": [0, 1, 2, 5], "rouge": [41.86, 14.12, 37.21]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-7376", "n_sentences": 25, "selected": [3, 10, 13, 18], "rouge": [42.65, 7.66, 36.02]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3011", "n_sentences": 39, "selected": [0, 1, 2, 28], "rouge": [31.69, 6.63, 30.6]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9480", "n_sentences": 44, "selected": [0, 1, 2, 16], "rouge": [32.46, 10.58, 29.32]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-9420", "n_sentences": 53, "selected": [10, 19, 24, 49], "rouge": [12.82, 0.0, 12.82]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-5202", "n_sentences": 62, "selected": [7, 26, 34, 35], "rouge": [20.78, 1.32, 15.58]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3128", "n_sentences": 42, "selected": [0, 1, 2, 3], "rouge": [29.69, 6.35, 23.44]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-712", "n_sentences": 36, "selected": [4, 23, 26, 35], "rouge": [18.4, 3.73, 15.95]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-3780", "n_sentences": 10, "selected": [0, 2, 4, 9], "rouge": [51.49, 40.4, 51.49]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-2943", "n_sentences": 18, "selected": [0, 1, 2, 17], "rouge": [34.43, 18.33, 32.79]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-4626", "n_sentences": 107, "selected": [21, 33, 50, 92], "rouge": [7.69, 0.0, 7.69]}
+{"dataset": "cnn_dm", "system": "full_pipeline", "doc": "cnn_dm-test-398", "n_sentences": 33, "selected": [7, 18, 23, 25], "rouge": [20.83, 5.63, 19.44]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-8641", "n_sentences": 22, "selected": [0, 1, 2, 3], "rouge": [45.16, 24.59, 40.32]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3477", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [50.0, 37.25, 48.08]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-227", "n_sentences": 50, "selected": [0, 1, 2, 3], "rouge": [23.84, 6.71, 23.84]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5413", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [51.75, 26.95, 47.55]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5572", "n_sentences": 54, "selected": [0, 1, 2, 3], "rouge": [34.38, 9.45, 32.81]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-10860", "n_sentences": 16, "selected": [0, 1, 2, 3], "rouge": [63.91, 23.95, 53.25]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-11208", "n_sentences": 31, "selected": [0, 1, 2, 3], "rouge": [52.94, 31.34, 41.18]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9604", "n_sentences": 34, "selected": [0, 1, 2, 3], "rouge": [47.41, 31.58, 44.44]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-6297", "n_sentences": 13, "selected": [0, 1, 2, 3], "rouge": [45.33, 36.49, 44.0]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-1650", "n_sentences": 28, "selected": [0, 1, 2, 3], "rouge": [16.53, 1.68, 16.53]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-1427", "n_sentences": 48, "selected": [0, 1, 2, 3], "rouge": [27.14, 14.49, 25.71]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-10373", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [22.22, 3.01, 19.26]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-1537", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [43.1, 10.53, 39.66]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9041", "n_sentences": 41, "selected": [0, 1, 2, 3], "rouge": [36.92, 9.38, 35.38]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-4398", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [16.87, 0.0, 7.23]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-10877", "n_sentences": 19, "selected": [0, 1, 2, 3], "rouge": [42.86, 23.19, 41.43]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-11266", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [44.04, 13.08, 34.86]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9373", "n_sentences": 35, "selected": [0, 1, 2, 3], "rouge": [46.81, 24.46, 42.55]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5722", "n_sentences": 20, "selected": [0, 1, 2, 3], "rouge": [31.76, 8.33, 27.06]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3570", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [16.16, 4.12, 14.14]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-1421", "n_sentences": 35, "selected": [0, 1, 2, 3], "rouge": [17.65, 6.0, 17.65]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-2853", "n_sentences": 21, "selected": [0, 1, 2, 3], "rouge": [53.12, 36.51, 50.0]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9951", "n_sentences": 70, "selected": [0, 1, 2, 3], "rouge": [40.82, 11.03, 32.65]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5765", "n_sentences": 16, "selected": [0, 1, 2, 3], "rouge": [41.77, 15.38, 36.71]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-8615", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [24.84, 11.32, 24.84]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-982", "n_sentences": 68, "selected": [0, 1, 2, 3], "rouge": [31.37, 16.0, 29.41]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5856", "n_sentences": 33, "selected": [0, 1, 2, 3], "rouge": [45.64, 14.97, 40.27]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3220", "n_sentences": 8, "selected": [0, 1, 2, 3], "rouge": [25.71, 7.25, 25.71]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5190", "n_sentences": 43, "selected": [0, 1, 2, 3], "rouge": [46.26, 23.45, 42.18]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-6169", "n_sentences": 30, "selected": [0, 1, 2, 3], "rouge": [46.7, 15.38, 35.53]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-315", "n_sentences": 10, "selected": [0, 1, 2, 3], "rouge": [26.26, 12.37, 26.26]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-2335", "n_sentences": 9, "selected": [0, 1, 2, 3], "rouge": [35.04, 11.85, 32.12]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-1343", "n_sentences": 14, "selected": [0, 1, 2, 3], "rouge": [38.1, 18.07, 35.71]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-8606", "n_sentences": 24, "selected": [0, 1, 2, 3], "rouge": [48.35, 25.56, 45.05]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-8636", "n_sentences": 31, "selected": [0, 1, 2, 3], "rouge": [44.96, 11.02, 40.31]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-4687", "n_sentences": 50, "selected": [0, 1, 2, 3], "rouge": [21.97, 2.34, 20.81]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-11049", "n_sentences": 23, "selected": [0, 1, 2, 3], "rouge": [34.36, 11.18, 26.99]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-4847", "n_sentences": 62, "selected": [0, 1, 2, 3], "rouge": [58.59, 40.82, 56.57]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9920", "n_sentences": 15, "selected": [0, 1, 2, 3], "rouge": [51.39, 30.99, 47.22]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-7376", "n_sentences": 25, "selected": [0, 1, 2, 3], "rouge": [39.81, 9.57, 35.07]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3011", "n_sentences": 39, "selected": [0, 1, 2, 3], "rouge": [29.38, 6.86, 28.25]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9480", "n_sentences": 44, "selected": [0, 1, 2, 3], "rouge": [44.09, 23.91, 41.94]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-9420", "n_sentences": 53, "selected": [0, 1, 2, 3], "rouge": [28.15, 9.02, 28.15]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-5202", "n_sentences": 62, "selected": [0, 1, 2, 3], "rouge": [47.76, 9.09, 40.3]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3128", "n_sentences": 42, "selected": [0, 1, 2, 3], "rouge": [29.69, 6.35, 23.44]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-712", "n_sentences": 36, "selected": [0, 1, 2, 3], "rouge": [38.85, 17.52, 38.85]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-3780", "n_sentences": 10, "selected": [0, 1, 2, 3], "rouge": [43.24, 22.02, 36.04]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-2943", "n_sentences": 18, "selected": [0, 1, 2, 3], "rouge": [34.43, 18.33, 32.79]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-4626", "n_sentences": 107, "selected": [0, 1, 2, 3], "rouge": [30.87, 9.52, 29.53]}
+{"dataset": "cnn_dm", "system": "abl_position", "doc": "cnn_dm-test-398", "n_sentences": 33, "selected": [0, 1, 2, 3], "rouge": [21.69, 4.88, 18.07]}

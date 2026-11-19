@@ -1,0 +1,10 @@
+converged in 21 iters
+rankers ok; vertex-3 score by gamma: {0: 0.1292, 1: 0.0, 2: 0.0, inf: 0.0}
+logic tests pass: {'n': 3, 'kept': 3, 'directed': 2, 'rejected_pairs': 1, 'same_sentence': 0, 'threshold': 5.0, 'negative_edges': 2}
+budget tests pass: [0] [2]
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "<stdin>", line 3, in <genexpr>
+AttributeError: module 'rouge_score' has no attribute '__version__'
+cnn_dm exit=0
+tldr exit=0

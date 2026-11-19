@@ -1,0 +1,8 @@
+command: python evaluate.py --datasets cnn_dm --limit-dev 20 --limit-test 50 --systems lead oracle full_pipeline abl_position --device mps --out results/smoke 
+cwd: /Users/alfardilalam/graphsum
+seed: 0 (evaluate.py default)
+git commit: none (not a git repository)
+source sha256 (*.py, sorted): c0699a8047eec1a21ea903bf61a6347444e6269145708b0e25c13827a0a433f8
+host: Mac  started: 2026-11-16T17:32:19Z
+finished: 2026-11-16T17:47:50Z  wall seconds: 928  exit: 0
+python 3.12.9 | torch=2.9.1 transformers=5.2.0.dev0 datasets=5.2.0 spacy=3.8.18 rouge_score=0.1.2 numpy=2.2.3 (backfilled; wrapper bug)

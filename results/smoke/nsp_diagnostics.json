@@ -1,0 +1,130 @@
+{
+ "beta": 0.0,
+ "docs": [
+  {
+   "doc": "cnn_dm-test-8641",
+   "n_sentences": 22,
+   "kept_pairs": 231,
+   "rejected_share": 0.134,
+   "both_orders_accepted_share": 0.766,
+   "raw_logodds": {
+    "q0": -11.342,
+    "q10": -6.32,
+    "q25": 5.468,
+    "q50": 10.878,
+    "q75": 12.56,
+    "q90": 12.768,
+    "q100": 12.991,
+    "mean": 7.519
+   },
+   "abs_delta_directed": {
+    "q0": 0.0,
+    "q10": 0.017,
+    "q25": 0.057,
+    "q50": 0.282,
+    "q75": 1.126,
+    "q90": 7.246,
+    "q100": 17.297,
+    "mean": 1.828
+   },
+   "confidence_directed": {
+    "q0": 0.0,
+    "q10": 0.008,
+    "q25": 0.029,
+    "q50": 0.14,
+    "q75": 0.51,
+    "q90": 0.999,
+    "q100": 1.0,
+    "mean": 0.32
+   },
+   "share_conf_below_0.1": 0.45,
+   "adjacent_true_order_preferred": 0.667
+  },
+  {
+   "doc": "cnn_dm-test-3477",
+   "n_sentences": 18,
+   "kept_pairs": 153,
+   "rejected_share": 0.059,
+   "both_orders_accepted_share": 0.843,
+   "raw_logodds": {
+    "q0": -11.688,
+    "q10": -3.697,
+    "q25": 8.348,
+    "q50": 10.87,
+    "q75": 11.93,
+    "q90": 12.66,
+    "q100": 13.022,
+    "mean": 8.347
+   },
+   "abs_delta_directed": {
+    "q0": 0.0,
+    "q10": 0.039,
+    "q25": 0.098,
+    "q50": 0.509,
+    "q75": 1.716,
+    "q90": 8.405,
+    "q100": 17.937,
+    "mean": 2.178
+   },
+   "confidence_directed": {
+    "q0": 0.0,
+    "q10": 0.02,
+    "q25": 0.049,
+    "q50": 0.249,
+    "q75": 0.695,
+    "q90": 0.999,
+    "q100": 1.0,
+    "mean": 0.372
+   },
+   "share_conf_below_0.1": 0.312,
+   "adjacent_true_order_preferred": 0.706
+  },
+  {
+   "doc": "cnn_dm-test-227",
+   "n_sentences": 50,
+   "kept_pairs": 1225,
+   "rejected_share": 0.029,
+   "both_orders_accepted_share": 0.904,
+   "raw_logodds": {
+    "q0": -11.044,
+    "q10": 6.013,
+    "q25": 9.619,
+    "q50": 11.242,
+    "q75": 12.056,
+    "q90": 12.501,
+    "q100": 12.994,
+    "mean": 9.71
+   },
+   "abs_delta_directed": {
+    "q0": 0.001,
+    "q10": 0.061,
+    "q25": 0.166,
+    "q50": 0.473,
+    "q75": 1.472,
+    "q90": 3.932,
+    "q100": 18.808,
+    "mean": 1.76
+   },
+   "confidence_directed": {
+    "q0": 0.0,
+    "q10": 0.03,
+    "q25": 0.083,
+    "q50": 0.232,
+    "q75": 0.627,
+    "q90": 0.962,
+    "q100": 1.0,
+    "mean": 0.366
+   },
+   "share_conf_below_0.1": 0.297,
+   "adjacent_true_order_preferred": 0.571
+  }
+ ],
+ "vs_lead": {
+  "docs": 50,
+  "identical_to_lead": 2,
+  "identical_share": 0.04,
+  "mean_overlap_with_lead": 0.32,
+  "mean_first_pick_position": 3.7,
+  "abl_position_identical_to_lead": 50
+ }
+}

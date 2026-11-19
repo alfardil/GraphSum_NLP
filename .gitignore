@@ -1,0 +1,16 @@
+# environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# datasets (full ones live on the HPC team scratch folder)
+data_raw/
+data_sample/
+wikihowAll.csv
+*.parquet
+*.csv.gz
+
+# OS / editor
+.DS_Store
+.idea/

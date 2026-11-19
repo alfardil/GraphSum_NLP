@@ -1,0 +1,3746 @@
+{
+  "cnn_dm": {
+    "n": 3,
+    "budget": "3 sentences",
+    "n_dev": 20,
+    "n_test": 50,
+    "systems": {
+      "random": {
+        "group": "bound",
+        "params": {},
+        "test": [
+          27.13,
+          8.26,
+          24.01
+        ],
+        "dev_trials": [],
+        "seconds": 0.1
+      },
+      "lead": {
+        "group": "baseline",
+        "params": {},
+        "test": [
+          38.83,
+          16.05,
+          34.86
+        ],
+        "dev_trials": [],
+        "seconds": 0.1
+      },
+      "oracle": {
+        "group": "bound",
+        "params": {},
+        "test": [
+          57.0,
+          35.77,
+          53.23
+        ],
+        "dev_trials": [],
+        "seconds": 0.4
+      },
+      "degree_tfidf": {
+        "group": "baseline",
+        "params": {
+          "beta": 0.0
+        },
+        "test": [
+          34.12,
+          14.57,
+          31.5
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0
+            },
+            "dev": [
+              34.887,
+              14.141,
+              31.685
+            ],
+            "objective": 26.90421335859611
+          },
+          {
+            "params": {
+              "beta": 0.3
+            },
+            "dev": [
+              31.464,
+              12.888,
+              28.528
+            ],
+            "objective": 24.293185266869045
+          },
+          {
+            "params": {
+              "beta": 0.6
+            },
+            "dev": [
+              30.873,
+              12.448,
+              27.944
+            ],
+            "objective": 23.75496614610851
+          }
+        ],
+        "seconds": 0.2
+      },
+      "textrank": {
+        "group": "baseline",
+        "params": {},
+        "test": [
+          34.51,
+          14.31,
+          31.36
+        ],
+        "dev_trials": [],
+        "seconds": 0.1
+      },
+      "lexpagerank": {
+        "group": "baseline",
+        "params": {},
+        "test": [
+          33.43,
+          12.9,
+          30.51
+        ],
+        "dev_trials": [],
+        "seconds": 0.1
+      },
+      "pacsum_tfidf": {
+        "group": "baseline",
+        "params": {
+          "beta": 0.0,
+          "lambda1": -1.0
+        },
+        "test": [
+          39.44,
+          18.31,
+          36.14
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0,
+              "lambda1": -2.0
+            },
+            "dev": [
+              39.497,
+              18.549,
+              36.456
+            ],
+            "objective": 31.500755553211942
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "lambda1": -1.0
+            },
+            "dev": [
+              39.94,
+              18.129,
+              36.983
+            ],
+            "objective": 31.683813357477177
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "lambda1": -0.5
+            },
+            "dev": [
+              39.063,
+              17.856,
+              36.363
+            ],
+            "objective": 31.093909057684282
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "lambda1": 0.0
+            },
+            "dev": [
+              38.66,
+              17.786,
+              35.939
+            ],
+            "objective": 30.79479257002104
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "lambda1": -2.0
+            },
+            "dev": [
+              36.667,
+              15.802,
+              33.789
+            ],
+            "objective": 28.752763726745233
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "lambda1": -1.0
+            },
+            "dev": [
+              35.894,
+              14.607,
+              32.51
+            ],
+            "objective": 27.670104332514573
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "lambda1": -0.5
+            },
+            "dev": [
+              35.124,
+              14.623,
+              32.352
+            ],
+            "objective": 27.366347529123345
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "lambda1": 0.0
+            },
+            "dev": [
+              34.272,
+              14.452,
+              31.385
+            ],
+            "objective": 26.702970024308573
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "lambda1": -2.0
+            },
+            "dev": [
+              35.588,
+              16.938,
+              33.252
+            ],
+            "objective": 28.59253386379325
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "lambda1": -1.0
+            },
+            "dev": [
+              33.665,
+              15.467,
+              31.559
+            ],
+            "objective": 26.89721054408596
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "lambda1": -0.5
+            },
+            "dev": [
+              34.162,
+              15.657,
+              31.815
+            ],
+            "objective": 27.2113715641005
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "lambda1": 0.0
+            },
+            "dev": [
+              34.135,
+              15.509,
+              31.552
+            ],
+            "objective": 27.065360266836837
+          }
+        ],
+        "seconds": 0.3
+      },
+      "full_pipeline": {
+        "group": "ours",
+        "params": {
+          "beta": 0.6,
+          "gamma": 2.0,
+          "memory": 0.5
+        },
+        "test": [
+          30.88,
+          9.69,
+          27.3
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              21.307,
+              3.97,
+              19.45
+            ],
+            "objective": 14.908903071223913
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              21.307,
+              3.97,
+              19.45
+            ],
+            "objective": 14.908903071223913
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              21.307,
+              3.97,
+              19.45
+            ],
+            "objective": 14.908903071223913
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              21.307,
+              3.97,
+              19.45
+            ],
+            "objective": 14.908903071223913
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              23.108,
+              5.933,
+              21.1
+            ],
+            "objective": 16.713796659922405
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              24.057,
+              6.39,
+              22.253
+            ],
+            "objective": 17.566369823762738
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              25.327,
+              7.623,
+              23.311
+            ],
+            "objective": 18.753510018169916
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              24.081,
+              6.546,
+              22.338
+            ],
+            "objective": 17.654919662734507
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              24.674,
+              6.859,
+              22.501
+            ],
+            "objective": 18.01166123299434
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              25.11,
+              7.054,
+              23.131
+            ],
+            "objective": 18.431744218814988
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              24.081,
+              6.472,
+              22.253
+            ],
+            "objective": 17.60208619519884
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              23.526,
+              6.269,
+              21.666
+            ],
+            "objective": 17.153554227568325
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              31.174,
+              11.318,
+              28.142
+            ],
+            "objective": 23.54501129605752
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              31.705,
+              11.236,
+              28.38
+            ],
+            "objective": 23.773903960005082
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              31.705,
+              11.236,
+              28.38
+            ],
+            "objective": 23.773903960005082
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              31.705,
+              11.236,
+              28.38
+            ],
+            "objective": 23.773903960005082
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              22.569,
+              4.662,
+              20.765
+            ],
+            "objective": 15.998699107006011
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              22.569,
+              4.662,
+              20.765
+            ],
+            "objective": 15.998699107006011
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              22.569,
+              4.662,
+              20.765
+            ],
+            "objective": 15.998699107006011
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              22.569,
+              4.662,
+              20.765
+            ],
+            "objective": 15.998699107006011
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              22.531,
+              5.074,
+              20.571
+            ],
+            "objective": 16.05874147628027
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              23.446,
+              5.531,
+              21.486
+            ],
+            "objective": 16.821035537825484
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              25.514,
+              7.302,
+              23.683
+            ],
+            "objective": 18.832865833828105
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              24.4,
+              6.946,
+              22.42
+            ],
+            "objective": 17.92180124299695
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              24.246,
+              6.074,
+              22.207
+            ],
+            "objective": 17.508713852289837
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              25.729,
+              6.239,
+              23.397
+            ],
+            "objective": 18.455099529268693
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              24.372,
+              6.658,
+              22.393
+            ],
+            "objective": 17.807769634197218
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              24.718,
+              6.677,
+              22.772
+            ],
+            "objective": 18.055697821215933
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              24.705,
+              6.049,
+              22.369
+            ],
+            "objective": 17.70781902130116
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              23.692,
+              5.977,
+              21.639
+            ],
+            "objective": 17.102649687750144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              23.692,
+              5.977,
+              21.639
+            ],
+            "objective": 17.102649687750144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              23.692,
+              5.977,
+              21.639
+            ],
+            "objective": 17.102649687750144
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              32.416,
+              12.605,
+              29.205
+            ],
+            "objective": 24.742094236956174
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.179,
+              12.398,
+              28.992
+            ],
+            "objective": 24.522861491764857
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              32.242,
+              12.366,
+              29.168
+            ],
+            "objective": 24.592161057321103
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              32.416,
+              12.605,
+              29.205
+            ],
+            "objective": 24.742094236956174
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              32.387,
+              12.805,
+              29.167
+            ],
+            "objective": 24.78653742319973
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.263,
+              12.382,
+              29.182
+            ],
+            "objective": 24.60921346705369
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              32.242,
+              12.366,
+              29.168
+            ],
+            "objective": 24.592161057321103
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              32.276,
+              12.398,
+              29.214
+            ],
+            "objective": 24.629537392568803
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              32.276,
+              12.398,
+              29.214
+            ],
+            "objective": 24.629537392568803
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              32.276,
+              12.398,
+              29.214
+            ],
+            "objective": 24.629537392568803
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              32.276,
+              12.398,
+              29.214
+            ],
+            "objective": 24.629537392568803
+          }
+        ],
+        "seconds": 406.1,
+        "graph": {
+          "directed_share": 0.988,
+          "rejected_share": 0.012,
+          "all_tied_docs": 0.02
+        }
+      },
+      "abl_position": {
+        "group": "ablation",
+        "params": {
+          "beta": 0.0,
+          "forward_weight": -2.0,
+          "gamma": 2.0,
+          "memory": 0.9
+        },
+        "test": [
+          38.82,
+          16.79,
+          35.21
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.766,
+              20.543,
+              39.187
+            ],
+            "objective": 33.832323768881935
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.793,
+              20.543,
+              39.323
+            ],
+            "objective": 33.88643632299449
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.423,
+              21.047,
+              39.804
+            ],
+            "objective": 34.424668643493305
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.599,
+              21.105,
+              39.967
+            ],
+            "objective": 34.55667395500169
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.766,
+              20.543,
+              39.187
+            ],
+            "objective": 33.832323768881935
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.793,
+              20.543,
+              39.323
+            ],
+            "objective": 33.88643632299449
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.423,
+              21.047,
+              39.804
+            ],
+            "objective": 34.424668643493305
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.599,
+              21.105,
+              39.967
+            ],
+            "objective": 34.55667395500169
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.766,
+              20.543,
+              39.187
+            ],
+            "objective": 33.832323768881935
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.793,
+              20.543,
+              39.323
+            ],
+            "objective": 33.88643632299449
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.423,
+              21.047,
+              39.804
+            ],
+            "objective": 34.424668643493305
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.599,
+              21.105,
+              39.967
+            ],
+            "objective": 34.55667395500169
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.0,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              41.755,
+              20.486,
+              39.279
+            ],
+            "objective": 33.839988989400226
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.822,
+              20.034,
+              39.345
+            ],
+            "objective": 33.73389019656384
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              37.789,
+              17.455,
+              35.287
+            ],
+            "objective": 30.176790961718343
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.875,
+              11.852,
+              28.086
+            ],
+            "objective": 23.604259810644738
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.015,
+              11.417,
+              27.37
+            ],
+            "objective": 22.934146419059648
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              31.154,
+              11.696,
+              28.366
+            ],
+            "objective": 23.73882629527816
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              29.986,
+              11.431,
+              27.528
+            ],
+            "objective": 22.981701570371467
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.187,
+              11.44,
+              27.545
+            ],
+            "objective": 23.057146541869482
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.169,
+              11.627,
+              27.362
+            ],
+            "objective": 23.052378947303982
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.822,
+              20.034,
+              39.345
+            ],
+            "objective": 33.73389019656384
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              37.789,
+              17.455,
+              35.287
+            ],
+            "objective": 30.176790961718343
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.875,
+              11.852,
+              28.086
+            ],
+            "objective": 23.604259810644738
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.015,
+              11.417,
+              27.37
+            ],
+            "objective": 22.934146419059648
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              31.154,
+              11.696,
+              28.366
+            ],
+            "objective": 23.73882629527816
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              29.986,
+              11.431,
+              27.528
+            ],
+            "objective": 22.981701570371467
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.187,
+              11.44,
+              27.545
+            ],
+            "objective": 23.057146541869482
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.169,
+              11.627,
+              27.362
+            ],
+            "objective": 23.052378947303982
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              41.822,
+              20.034,
+              39.345
+            ],
+            "objective": 33.73389019656384
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              37.789,
+              17.455,
+              35.287
+            ],
+            "objective": 30.176790961718343
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.875,
+              11.852,
+              28.086
+            ],
+            "objective": 23.604259810644738
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.015,
+              11.417,
+              27.37
+            ],
+            "objective": 22.934146419059648
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              31.154,
+              11.696,
+              28.366
+            ],
+            "objective": 23.73882629527816
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              29.986,
+              11.431,
+              27.528
+            ],
+            "objective": 22.981701570371467
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              30.187,
+              11.44,
+              27.545
+            ],
+            "objective": 23.057146541869482
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.169,
+              11.627,
+              27.362
+            ],
+            "objective": 23.052378947303982
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              37.841,
+              17.98,
+              35.156
+            ],
+            "objective": 30.325792785092528
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.3,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              42.301,
+              21.146,
+              39.714
+            ],
+            "objective": 34.38688623991144
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              36.892,
+              16.544,
+              33.409
+            ],
+            "objective": 28.948284494657724
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              34.846,
+              14.587,
+              31.519
+            ],
+            "objective": 26.98414999210038
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.054,
+              12.745,
+              29.345
+            ],
+            "objective": 24.714616522870056
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              31.215,
+              12.302,
+              28.745
+            ],
+            "objective": 24.08728085510268
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              35.041,
+              14.95,
+              31.667
+            ],
+            "objective": 27.218964697087728
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              31.77,
+              12.577,
+              29.078
+            ],
+            "objective": 24.475150415142043
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              31.09,
+              12.31,
+              28.414
+            ],
+            "objective": 23.938014254906083
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.767,
+              12.084,
+              28.488
+            ],
+            "objective": 23.779565067910358
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              34.364,
+              15.009,
+              32.062
+            ],
+            "objective": 27.145269005782684
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -2.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              36.892,
+              16.544,
+              33.409
+            ],
+            "objective": 28.948284494657724
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              34.846,
+              14.587,
+              31.519
+            ],
+            "objective": 26.98414999210038
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.054,
+              12.745,
+              29.345
+            ],
+            "objective": 24.714616522870056
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              31.215,
+              12.302,
+              28.745
+            ],
+            "objective": 24.08728085510268
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              35.041,
+              14.95,
+              31.667
+            ],
+            "objective": 27.218964697087728
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              31.77,
+              12.577,
+              29.078
+            ],
+            "objective": 24.475150415142043
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              31.09,
+              12.31,
+              28.414
+            ],
+            "objective": 23.938014254906083
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.767,
+              12.084,
+              28.488
+            ],
+            "objective": 23.779565067910358
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              34.364,
+              15.009,
+              32.062
+            ],
+            "objective": 27.145269005782684
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -1.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              36.892,
+              16.544,
+              33.409
+            ],
+            "objective": 28.948284494657724
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              34.846,
+              14.587,
+              31.519
+            ],
+            "objective": 26.98414999210038
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              32.054,
+              12.745,
+              29.345
+            ],
+            "objective": 24.714616522870056
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              31.215,
+              12.302,
+              28.745
+            ],
+            "objective": 24.08728085510268
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              35.041,
+              14.95,
+              31.667
+            ],
+            "objective": 27.218964697087728
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              31.77,
+              12.577,
+              29.078
+            ],
+            "objective": 24.475150415142043
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              31.09,
+              12.31,
+              28.414
+            ],
+            "objective": 23.938014254906083
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              30.767,
+              12.084,
+              28.488
+            ],
+            "objective": 23.779565067910358
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              34.364,
+              15.009,
+              32.062
+            ],
+            "objective": 27.145269005782684
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": -0.5,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              34.549,
+              15.241,
+              32.248
+            ],
+            "objective": 27.345694236953126
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 0.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 1.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": 2.0,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.5
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 0.9
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          },
+          {
+            "params": {
+              "beta": 0.6,
+              "forward_weight": 0.0,
+              "gamma": Infinity,
+              "memory": 1.0
+            },
+            "dev": [
+              38.446,
+              18.611,
+              34.677
+            ],
+            "objective": 30.578352443148276
+          }
+        ],
+        "seconds": 3.6,
+        "graph": {
+          "directed_share": 0.0,
+          "rejected_share": 0.0,
+          "all_tied_docs": 0.0
+        }
+      },
+      "abl_positive_pagerank": {
+        "group": "ablation",
+        "params": {
+          "beta": 0.6
+        },
+        "test": [
+          30.55,
+          9.66,
+          27.09
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0
+            },
+            "dev": [
+              21.307,
+              3.97,
+              19.45
+            ],
+            "objective": 14.908903071223913
+          },
+          {
+            "params": {
+              "beta": 0.3
+            },
+            "dev": [
+              22.569,
+              4.662,
+              20.765
+            ],
+            "objective": 15.998699107006011
+          },
+          {
+            "params": {
+              "beta": 0.6
+            },
+            "dev": [
+              32.378,
+              12.605,
+              29.354
+            ],
+            "objective": 24.77910728405527
+          }
+        ],
+        "seconds": 0.1,
+        "graph": {
+          "directed_share": 0.988,
+          "rejected_share": 0.012,
+          "all_tied_docs": 0.02
+        }
+      },
+      "abl_degree": {
+        "group": "ablation",
+        "params": {
+          "beta": 0.6
+        },
+        "test": [
+          28.67,
+          8.22,
+          25.75
+        ],
+        "dev_trials": [
+          {
+            "params": {
+              "beta": 0.0
+            },
+            "dev": [
+              21.739,
+              4.68,
+              20.168
+            ],
+            "objective": 15.529135778834727
+          },
+          {
+            "params": {
+              "beta": 0.3
+            },
+            "dev": [
+              20.976,
+              4.097,
+              19.216
+            ],
+            "objective": 14.762966358632257
+          },
+          {
+            "params": {
+              "beta": 0.6
+            },
+            "dev": [
+              30.488,
+              12.161,
+              28.403
+            ],
+            "objective": 23.68405352000312
+          }
+        ],
+        "seconds": 0.1,
+        "graph": {
+          "directed_share": 0.988,
+          "rejected_share": 0.012,
+          "all_tied_docs": 0.02
+        }
+      }
+    },
+    "oracle_positions": {
+      "deciles": [
+        0.264,
+        0.16,
+        0.152,
+        0.096,
+        0.112,
+        0.072,
+        0.032,
+        0.024,
+        0.056,
+        0.032
+      ],
+      "mean_relative_position": 0.309
+    },
+    "seconds": 416.1
+  }
+}

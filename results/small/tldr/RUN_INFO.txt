@@ -1,0 +1,8 @@
+command: python evaluate.py --datasets tldr --limit-dev 20 --limit-test 50 --device mps --batch-size 32 --seed 0 --out results/small/tldr 
+cwd: /Users/alfardilalam/graphsum
+seed: 0
+git commit: none (not a git repository)
+source sha256 (*.py, sorted): bc355bac82c2eb8a0bab1fd86877ab6eb29eef93cc0d31e8965972c41913b42a
+host: Mac  started: 2026-11-16T18:21:52Z
+python 3.12.9 | torch=2.9.1 transformers=5.2.0.dev0 datasets=5.2.0 spacy=3.8.18 rouge_score=0.1.2 numpy=2.2.3
+finished: 2026-11-16T18:27:08Z  wall seconds: 316  exit: 0

@@ -1,0 +1,18 @@
+[
+ {
+  "dataset": "cnn_dm",
+  "rival": "abl_position",
+  "dev_mean_ours": 24.79,
+  "dev_mean_rival": 34.56,
+  "docs_ours_worse": 15,
+  "dev_docs": 20
+ },
+ {
+  "dataset": "tldr",
+  "rival": "abl_position",
+  "dev_mean_ours": 10.34,
+  "dev_mean_rival": 11.58,
+  "docs_ours_worse": 9,
+  "dev_docs": 20
+ }
+]

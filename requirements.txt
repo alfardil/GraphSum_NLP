@@ -1,0 +1,8 @@
+torch
+transformers>=4.40
+datasets>=2.18
+spacy>=3.7
+nltk
+rouge-score
+numpy
+pandas
