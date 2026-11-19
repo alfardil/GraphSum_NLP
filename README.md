@@ -31,7 +31,7 @@ python evaluate.py --synthetic --model /tmp/tinybert --limit-dev 20 --limit-test
 |---|---|
 | `bert_graph.py` | Builds the graph: sentences or clauses as nodes, BERT similarity, the β threshold, NSP direction and negative links |
 | `splitting.py` | Splits documents and reference summaries into sentences and clauses, the same way the team's `ranking/` code does |
-| `rankers.py` | PageTrust (de Kerchove & Van Dooren 2008, Algorithm 4.1), PageRank and degree; gives the same scores as `ranking/pagetrust.py` |
+| `rankers.py` | PageTrust (de Kerchove & Van Dooren 2008, Algorithm 4.1), PageRank and degree. Next to the team's `ranking/` folder it calls `ranking/pagetrust.py`; on its own it uses a copy that gives the same scores |
 | `baselines.py` | Lead, Random, Oracle, Degree (TF-IDF), TextRank, LexPageRank and PacSum (TF-IDF), on stemmed text |
 | `data.py` | Loads CNN/DM, arXiv, PubMed, tldr-17, WikiHow and BillSum, with an 80/10/10 split for datasets that have no dev/test split |
 | `pipeline.py` | Puts every system behind one interface; `Summarizer` summarizes a single document |
@@ -40,6 +40,8 @@ python evaluate.py --synthetic --model /tmp/tinybert --limit-dev 20 --limit-test
 ## Working with the team repo
 
 The graph for each document is a matrix `W` in the team's format. `W[i, j] > 0` is a link from sentence i to sentence j, `W[i, j] < 0` is a negative link (NSP rejected both orders), 0 means no link, and the diagonal is ignored. Pass it to `pagetrust(W, alpha, gamma, memory)` in `ranking/pagetrust.py`. To build the graph on the team preprocessor's sentences or clauses, use `vertices_from_units(doc.units, doc.unit_sentence)`.
+
+When `ranking/` sits next to this folder (or `$TEAM_RANKING` points to it), PageRank and PageTrust come from `ranking/pagetrust.py`, so the whole team pipeline uses one implementation. The copy in `rankers.py` gives the same scores to within 1e-15, but two sentences with exactly equal scores can then come out in either order, so only one is used at a time. Set `GRAPHSUM_OWN_RANKERS=1` to use the copy anyway. Each run's `results.md` says which one it used.
 
 The defaults match `ranking/`. NLTK punkt splits sentences, arXiv and PubMed are split at their `" ."` tokens, and reference summaries are split like `ref_lines` in `ranking/run.py`. Clauses come from the team's rule-based splitter, and a sentence's score is the highest score among its clauses. Summary lengths and tie-breaking are the same too, and `cnndm` works as a name for `cnn_dm`. To use this repo's original setup (spaCy splitting and the average clause score), add `--splitter spacy --clause-splitter spacy --aggregate mean`.
 

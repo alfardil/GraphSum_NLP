@@ -4,7 +4,8 @@ PageRank / PageTrust scores, W convention, budgets and selection, sentence / cla
 reference splitting, and clause -> sentence aggregation.
 
 Finds ranking/ at $TEAM_RANKING, or ../ranking (graph/ inside the team repo). Without it,
-only the self-contained checks run.
+only the self-contained checks run. With it, rankers.pagetrust is the team's own function,
+and own_pagetrust (the standalone copy) is compared against it.
 
     python tests/test_team_compat.py
     TEAM_RANKING=/path/to/graph-summarization/ranking python tests/test_team_compat.py
@@ -97,13 +98,18 @@ rng = np.random.default_rng(0)
 worst = 0.0
 for _ in range(200):
     W = random_signed_graph(rng, int(rng.integers(2, 40)))
-    worst = max(worst, np.abs(rankers.pagerank(W) - T_pt.pagerank(W)).max())
+    worst = max(worst, np.abs(rankers.own_pagerank(W) - T_pt.pagerank(W)).max())
     for g in (0.0, 1.0, 2.0, np.inf):
         for m in (0.0, 0.5, 0.9, 1.0):
-            worst = max(worst, np.abs(rankers.pagetrust(W, 0.85, g, m) - T_pt.pagetrust(W, 0.85, g, m)).max())
+            worst = max(worst, np.abs(rankers.own_pagetrust(W, 0.85, g, m) - T_pt.pagetrust(W, 0.85, g, m)).max())
     assert np.allclose(rankers.in_degree(W), T_pt.degree_centrality(W))
 assert worst < 1e-9, worst
-print(f"rankers match the team's (max |diff| {worst:.1e})")
+print(f"own rankers match the team's (max |diff| {worst:.1e})")
+if not os.environ.get("GRAPHSUM_OWN_RANKERS"):
+    assert rankers.SOURCE == "ranking/pagetrust.py", rankers.SOURCE
+    W = random_signed_graph(rng, 25)
+    assert np.array_equal(rankers.pagetrust(W, 0.85, 1.0, 0.5), T_pt.pagetrust(W, 0.85, 1.0, 0.5))
+    print("graph/ calls the team's pagetrust()")
 
 # 2. budgets and selection
 team_keys = {"cnndm": "cnn_dm"}

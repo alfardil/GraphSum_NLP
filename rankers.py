@@ -21,12 +21,22 @@ distrust: their magnitude is not used, as in the paper.
 The paper notes convergence is not proven (observed linear in practice), so iteration
 is capped at max_iter.
 
-Kept numerically identical to the team's ranking/pagetrust.py (tests/test_team_compat.py):
+`pagerank` / `pagetrust` call the team's ranking/pagetrust.py when it is next to this folder
+(../ranking, or $TEAM_RANKING), so the team pipeline has one implementation; set
+GRAPHSUM_OWN_RANKERS=1 to force the copies below. SOURCE says which one is in use.
+The two agree to ~1e-15, but exact score ties can then break differently, which is why
+there is only one implementation in use at a time.
+
+own_pagerank / own_pagetrust are kept numerically identical to the team's code
+(tests/test_team_compat.py):
   * convergence waits for both x and diag(P~) to settle. On some graphs x stands still
     while distrust is still spreading; stopping on x alone would skip the negative links.
   * if every vertex is vetoed (possible with γ = inf), scores fall back to uniform.
 """
 from __future__ import annotations
+
+import importlib.util
+import os
 
 import numpy as np
 
@@ -41,7 +51,7 @@ def _transition(W: np.ndarray, z: np.ndarray) -> np.ndarray:
     return S
 
 
-def pagerank(W: np.ndarray, alpha: float = 0.85, eps: float = 1e-6, max_iter: int = 100,
+def own_pagerank(W: np.ndarray, alpha: float = 0.85, eps: float = 1e-6, max_iter: int = 100,
              z: np.ndarray | None = None) -> np.ndarray:
     """Weighted PageRank on the positive part of W (negative edges are ignored)."""
     n = W.shape[0]
@@ -59,7 +69,7 @@ def pagerank(W: np.ndarray, alpha: float = 0.85, eps: float = 1e-6, max_iter: in
     return x
 
 
-def pagetrust(W: np.ndarray, alpha: float = 0.85, gamma: float = 1.0, memory: float = 0.0,
+def own_pagetrust(W: np.ndarray, alpha: float = 0.85, gamma: float = 1.0, memory: float = 0.0,
               eps: float = 1e-6, max_iter: int = 100, z: np.ndarray | None = None,
               return_iters: bool = False):
     """PageTrust ranking. gamma may be np.inf. memory in [0, 1]: probability a surfer
@@ -111,3 +121,43 @@ def pagetrust(W: np.ndarray, alpha: float = 0.85, gamma: float = 1.0, memory: fl
 def in_degree(W: np.ndarray) -> np.ndarray:
     """Signed sum of incoming edge weights (degree centrality)."""
     return W.sum(axis=0)
+
+
+# --------------------------------------------------------------------------- team implementation
+
+def _load_team_pagetrust():
+    if os.environ.get("GRAPHSUM_OWN_RANKERS"):
+        return None
+    here = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(os.environ.get("TEAM_RANKING") or os.path.join(os.path.dirname(here), "ranking"),
+                        "pagetrust.py")
+    if not os.path.exists(path):
+        return None
+    spec = importlib.util.spec_from_file_location("_team_pagetrust", path)   # avoids name clashes
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+_team = _load_team_pagetrust()
+SOURCE = "ranking/pagetrust.py" if _team is not None else "rankers.py"
+
+
+def pagerank(W: np.ndarray, alpha: float = 0.85, eps: float = 1e-6, max_iter: int = 100,
+             z: np.ndarray | None = None) -> np.ndarray:
+    """Weighted PageRank on the positive part of W (team implementation when available)."""
+    if _team is None or z is not None:
+        return own_pagerank(W, alpha, eps, max_iter, z)
+    return _team.pagerank(W, alpha, eps, max_iter)
+
+
+def pagetrust(W: np.ndarray, alpha: float = 0.85, gamma: float = 1.0, memory: float = 0.0,
+              eps: float = 1e-6, max_iter: int = 100, z: np.ndarray | None = None,
+              return_iters: bool = False):
+    """PageTrust ranking (team implementation when available). gamma may be np.inf."""
+    if _team is None or z is not None:
+        return own_pagetrust(W, alpha, gamma, memory, eps, max_iter, z, return_iters)
+    if return_iters:
+        x, _, it = _team.pagetrust(W, alpha, gamma, memory, eps, max_iter, return_state=True)
+        return x, it
+    return _team.pagetrust(W, alpha, gamma, memory, eps, max_iter)

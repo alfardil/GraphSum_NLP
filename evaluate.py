@@ -40,6 +40,7 @@ from rouge_score import rouge_scorer
 
 from data import DATASETS, load_split, synthetic
 from pipeline import Budget, build_systems, prepare, summary_text
+from rankers import SOURCE as RANKER_SOURCE
 
 METRICS = ("rouge1", "rouge2", "rougeLsum")
 _scorer = rouge_scorer.RougeScorer(list(METRICS), use_stemmer=True)
@@ -188,7 +189,8 @@ def main():
 
         rouge = RougeCache(budget)
         res = {"n": budget.size, "budget": str(budget), "n_dev": len(dev), "n_test": len(test),
-               "splitting": dict(split_kw, aggregate=args.aggregate), "systems": {}}
+               "splitting": dict(split_kw, aggregate=args.aggregate), "pagetrust": RANKER_SOURCE,
+               "systems": {}}
         for name, sys_ in systems.items():
             ts = time.time()
             log(f"[{ds}] {name}: tuning over {len(sys_.grid)} setting(s)")
@@ -224,7 +226,7 @@ def main():
           f"Tuned on dev (objective: mean of R-1/R-2/R-L F1). Model: `{args.model}`. "
           f"Docs truncated to {args.max_sentences or 'no'} sentence limit. "
           f"Splitting: sentences={args.splitter}, clauses={args.clause_splitter}, "
-          f"clause aggregate={args.aggregate}.\n"]
+          f"clause aggregate={args.aggregate}. PageRank/PageTrust from `{RANKER_SOURCE}`.\n"]
     for ds, r in all_results.items():
         md += [f"\n## {ds}\n", f"Budget = {r.get('budget', str(r['n']) + ' sentences')} · {r['n_dev']} dev docs · {r['n_test']} test docs\n",
                "| System | Group | R-1 | R-2 | R-L | Tuned params |", "|---|---|---:|---:|---:|---|"]
